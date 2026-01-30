@@ -1,91 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=240, height=320, initial-scale=1.0, user-scalable=no">
-<title>Zikir Daily</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    width: 240px;
-    height: 320px;
-    background: #0f3d2e;
-}
-
-.app {
-    width: 240px;
-    height: 320px;
-    padding: 10px;
-    text-align: center;
-    color: #ffffff;
-}
-
-h1 {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.counter {
-    font-size: 40px;
-    background: #ffffff;
-    color: #145a32;
-    border-radius: 6px;
-    padding: 8px 0;
-    margin-bottom: 10px;
-}
-
-.btn {
-    width: 100%;
-    font-size: 18px;
-    padding: 8px;
-    margin-top: 6px;
-    border: none;
-    border-radius: 6px;
-}
-
-.add {
-    background: #27ae60;
-    color: #ffffff;
-}
-
-.reset {
-    background: #c0392b;
-    color: #ffffff;
-}
-</style>
+<title>Zikir</title>
 </head>
 
-<body>
+<body bgcolor="#145a32" text="white">
+<center>
 
-<div class="app">
-    <h1>Zikir Daily</h1>
+<h3>Zikir Daily</h3>
 
-    <div class="counter" id="count">0</div>
+<p id="c">0</p>
 
-    <button class="btn add" onclick="addZikir()">+</button>
-    <button class="btn reset" onclick="resetZikir()">Reset</button>
-</div>
+<input type="button" value=" + " onclick="c++;document.getElementById('c').innerHTML=c;">
+<br><br>
+<input type="button" value="Reset" onclick="c=0;document.getElementById('c').innerHTML=c;">
 
 <script>
-let count = 0;
-
-function addZikir() {
-    count++;
-    document.getElementById("count").innerText = count;
-}
-
-function resetZikir() {
-    count = 0;
-    document.getElementById("count").innerText = count;
-}
+var c = 0;
 </script>
 
+</center>
 </body>
 </html>
